@@ -1,19 +1,22 @@
 import { useState } from "react";
+import { HiMenu } from "react-icons/hi";
 
 function Navbar() {
     const navlinks: string[] = ['Home', 'Technologies', 'Projects', 'About', 'Contact'];
     const [activeLink, setActiveLink] = useState<string>("Home");
 
     return (
-        <div className="border-b border-neutral-100" >
-            <nav className="container m-auto flex justify-between py-4">
+        <div className="sticky top-0 border-b border-neutral-100" >
+            <nav className="container m-auto flex justify-between items-center p-4">
 
-                <div>
+                <HiMenu className="text-2xl md:hidden" />
+
+                <div className="w-fit">
                     <img src="/logo.svg" alt="logo image of Dev Stack" />
                 </div>
 
 
-                <div className="flex items-center">
+                <div className="hidden md:flex items-center">
                     {navlinks.map((link: string, index: number) => (
                         <a key={index}
                             href="#"
