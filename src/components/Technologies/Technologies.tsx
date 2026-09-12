@@ -16,14 +16,14 @@ function Technologies() {
     <div>
       {/* Heading Part */}
       <div className="container mx-auto">
-        <h2 className="text-4xl text-black font-black">
+        <h2 className="text-4xl/relaxed text-black font-black">
           Explore the <span className="text-primary">Technologies</span>
         </h2>
         <p>Pick one technology per category to build your ideal stack.</p>
       </div>
 
       {/* Technology cards grid section */}
-      <div className="grid grid-cols-1 md:grid-cols-4">
+      <div className="grid grid-cols-1 md:grid-cols-4 mt-10">
         <Suspense fallback={<Loading />}>
           <TechnologyList technologiesPromise={technologiesPromise} />
         </Suspense>
