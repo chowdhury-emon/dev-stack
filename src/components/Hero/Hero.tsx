@@ -2,12 +2,12 @@ import bannerStackImage from './../../assets/banner-stack.png'
 
 function Hero() {
     return (
-        <div className="container mx-auto min-h-100 grid gird-col-1 sm:grid-cols-2 items-center">
+        <div className="container mx-auto grid gird-col-1 md:grid-cols-2 items-center">
             {/* Hero Details Column */}
-            <div className="grid gap-6 items-center">
-                <h1 className="text-6xl font-black text-black">
+            <div className="grid items-center gap-6 text-center md:text-left">
+                <h1 className="text-3xl md:text-5xl font-black text-black mt-20 md:mt-auto">
                     <div >Build Your Ideal</div>
-                    <div className="w-fit bg-linear-to-r from-secondary to-[#8338E4] bg-clip-text text-transparent">Development Stack</div>
+                    <div className="w-fit mx-auto md:mx-0 bg-linear-to-r from-secondary to-[#8338E4] bg-clip-text text-transparent ">Development Stack</div>
                 </h1>
 
                 <p className='text-balance'>
@@ -16,7 +16,7 @@ function Hero() {
                     next project.
                 </p>
 
-                <div className="w-fit grid grid-cols-2 gap-4 mt-8">
+                <div className="w-fit mx-auto md:mx-0 grid grid-cols-2 gap-4 mt-8 border-red-500">
                     <button
                         className="p-2 px-3 text-sm rounded-lg border-2 border-neutral-100 bg-linear-to-r from-secondary to-primary text-white">
                         Explore Technologies
@@ -26,7 +26,7 @@ function Hero() {
             </div>
 
             {/* Hero Image Column */}
-            <div className="flex justify-end">
+            <div className="flex justify-center md:justify-end">
                 <img src={bannerStackImage} alt="banner stack image" />
             </div>
 
