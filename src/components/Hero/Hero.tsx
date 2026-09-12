@@ -2,7 +2,7 @@ import bannerStackImage from './../../assets/banner-stack.png'
 
 function Hero() {
     return (
-        <div className="container mx-auto min-h-100 grid grid-cols-2 items-center">
+        <div className="container mx-auto min-h-100 grid gird-col-1 sm:grid-cols-2 items-center">
             {/* Hero Details Column */}
             <div className="grid gap-6 items-center">
                 <h1 className="text-6xl font-black text-black">
@@ -17,8 +17,11 @@ function Hero() {
                 </p>
 
                 <div className="w-fit grid grid-cols-2 gap-4 mt-8">
-                    <button className="p-2 px-3 text-sm rounded-lg border-3 border-neutral-100 bg-linear-to-r from-secondary to-primary text-white">Explore Technologies</button>
-                    <button className="p-2 px-3 text-sm rounded-lg border-3 border-neutral-100">Learn More</button>
+                    <button
+                        className="p-2 px-3 text-sm rounded-lg border-2 border-neutral-100 bg-linear-to-r from-secondary to-primary text-white">
+                        Explore Technologies
+                    </button>
+                    <button className="p-2 px-3 text-sm rounded-lg border-2 border-neutral-100">Learn More</button>
                 </div>
             </div>
 

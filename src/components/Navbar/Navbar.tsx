@@ -6,7 +6,7 @@ function Navbar() {
     const [activeLink, setActiveLink] = useState<string>("Home");
 
     return (
-        <div className="sticky top-0 border-b border-neutral-100" >
+        <div className="sticky top-0 border-b border-neutral-100 bg-white" >
             <nav className="container m-auto flex justify-between items-center p-4">
 
                 <HiMenu className="text-2xl md:hidden" />
