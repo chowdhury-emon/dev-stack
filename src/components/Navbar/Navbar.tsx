@@ -6,8 +6,8 @@ function Navbar() {
     const [activeLink, setActiveLink] = useState<string>("Home");
 
     return (
-        <div className="sticky top-0 border-b border-neutral-100 bg-white" >
-            <nav className="container m-auto flex justify-between items-center p-4">
+        <header className="sticky top-0 border-b border-neutral-100 bg-white" >
+            <div className="container m-auto flex justify-between items-center p-4">
 
                 <HiMenu className="text-3xl md:hidden" />
 
@@ -16,7 +16,7 @@ function Navbar() {
                 </div>
 
 
-                <div className="hidden md:flex items-center">
+                <nav className="hidden md:flex items-center">
                     {navlinks.map((link: string, index: number) => (
                         <a key={index}
                             href="#"
@@ -26,15 +26,15 @@ function Navbar() {
                         </a>
                     ))
                     }
-                </div>
+                </nav>
 
 
                 <div className="flex items-center">
                     <button className="min-w-fit px-4 py-2 rounded-full text-sm font-medium cursor-pointer">Sign In</button>
                     <button className="min-w-fit px-4 py-2 rounded-full text-sm font-medium cursor-pointer bg-primary text-white">Sign Up</button>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </header>
     )
 }
 
