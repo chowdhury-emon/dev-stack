@@ -1,7 +1,14 @@
+import type { Technology } from "./techonology.type"
 
-function TechnologyCard() {
+interface TechnologyCardProps {
+    technology: Technology;
+}
+
+function TechnologyCard({ technology }: TechnologyCardProps) {
     return (
-        <div>TechnologyCard</div>
+        <div>
+            <h1> { technology.name}</h1>
+        </div>
     )
 }
 

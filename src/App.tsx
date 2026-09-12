@@ -6,8 +6,10 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Hero />
-      <Technologies />
+      <main className="container mx-auto">
+        <Hero />
+        <Technologies />
+      </main>
     </div>
   )
 }
