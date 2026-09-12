@@ -9,9 +9,9 @@ function Navbar() {
         <div className="sticky top-0 border-b border-neutral-100 bg-white" >
             <nav className="container m-auto flex justify-between items-center p-4">
 
-                <HiMenu className="text-2xl md:hidden" />
+                <HiMenu className="text-3xl md:hidden" />
 
-                <div className="w-fit">
+                <div>
                     <img src="/logo.svg" alt="logo image of Dev Stack" />
                 </div>
 

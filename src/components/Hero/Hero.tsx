@@ -2,7 +2,7 @@ import bannerStackImage from './../../assets/banner-stack.png'
 
 function Hero() {
     return (
-        <div className="container mx-auto grid gird-col-1 md:grid-cols-2 items-center">
+        <div className="container mx-auto px-4 grid gird-col-1 md:grid-cols-2 items-center">
             {/* Hero Details Column */}
             <div className="grid items-center gap-6 text-center md:text-left">
                 <h1 className="text-3xl md:text-5xl font-black text-black mt-20 md:mt-auto">
