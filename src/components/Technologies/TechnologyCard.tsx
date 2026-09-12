@@ -19,7 +19,7 @@ function TechnologyCard({ technology }: TechnologyCardProps) {
 
             <p className="text-sm ">{technology.description}</p>
 
-            <div className="flex justify-between items-center text-sm font-semibold border-t-2 border-neutral-100 py-4 my-4">
+            <div className="flex justify-between items-center gap-1 text-sm font-semibold border-t-2 border-neutral-100 py-4 my-4">
                 <div className="bg-neutral-100 p-1 px-2 rounded-md">{technology.category}</div>
                 <div>{technology.difficulty}</div>
                 <div className="flex items-center gap-0.5">

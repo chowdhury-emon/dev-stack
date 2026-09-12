@@ -11,7 +11,7 @@ function TechnologyList({ technologiesPromise }: TechnologyListProps) {
     console.log(technologiesData)
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 col-span-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 col-span-3 gap-4">
             {
                 technologiesData.map((data, index) => (
                     <TechnologyCard key={index} technology={data} />

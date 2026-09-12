@@ -15,11 +15,11 @@ function Technologies() {
   return (
     <div>
       {/* Heading Part */}
-      <div className="container mx-auto">
-        <h2 className="text-4xl/relaxed text-black font-black">
+      <div className="container mx-auto text-center md:text-start">
+        <h2 className="text-2xl md:text-4xl/relaxed text-center md:text-start text-black font-black">
           Explore the <span className="text-primary">Technologies</span>
         </h2>
-        <p>Pick one technology per category to build your ideal stack.</p>
+        <p className="text-sm">Pick one technology per category to build your ideal stack.</p>
       </div>
 
       {/* Technology cards grid section */}
@@ -27,10 +27,7 @@ function Technologies() {
         <Suspense fallback={<Loading />}>
           <TechnologyList technologiesPromise={technologiesPromise} />
         </Suspense>
-
       </div>
-
-
 
     </div>
   )
