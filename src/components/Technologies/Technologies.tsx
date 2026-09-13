@@ -1,7 +1,7 @@
 import { Suspense, useState } from "react";
 import type { Technology } from "../../types/techonology.type"
 import Loading from "../../ui/Loading";
-import TechnologyList from "./TechnologyList";
+import TechnologyList from "./TechnologyList/TechnologyList";
 import StackList from "./StackList/StackList";
 import { toast } from "react-toastify";
 
@@ -18,30 +18,30 @@ function Technologies() {
   const handleAddToSelectedStack = (technology: Technology) => {
     setSelectedStacks(prev => [...prev, technology])
     console.log("Selected", selectedStacks)
-    toast.success(`${technology.name} added to Stack`)
+    toast.success(`${technology.name} has added to stack`)
 
   }
 
-  const handleSelectedStackRemove = (selectedTechnology: Technology) => {
+  const handleRemoveFromSelectedStack = (selectedTechnology: Technology) => {
     const newSelectedItems = selectedStacks.filter(technology => technology.id !== selectedTechnology.id)
     setSelectedStacks(newSelectedItems);
-    toast.info(`${selectedTechnology.name} removed from Stack`)
+    toast.info(`${selectedTechnology.name} has been removed from stack`)
 
   }
 
-  const handleSelectedStackRemoveAll = () => {
+  const handleRemoveAllFromSelectedStack = () => {
     setSelectedStacks([])
-    toast.info("All Items has been Removed from Stack")
+    toast.info("All items has been removed from stack")
   }
 
   return (
     <div>
       {/* Heading Part */}
       <div className="container mx-auto text-center md:text-start">
-        <h2 className="text-2xl md:text-4xl/relaxed text-center md:text-start text-black font-black">
+        <h2 className="text-2xl/loose md:text-4xl/relaxed text-center md:text-start text-black font-black">
           Explore the <span className="text-primary">Technologies</span>
         </h2>
-        <p className="text-sm">Pick one technology per category to build your ideal stack.</p>
+        <p className="text-xs md:text-sm">Pick one technology per category to build your ideal stack.</p>
       </div>
 
       {/* Technology cards grid section */}
@@ -53,10 +53,11 @@ function Technologies() {
             handleAddToSelectedStack={handleAddToSelectedStack}
           />
         </Suspense>
+
         <StackList
           selectedStacks={selectedStacks}
-          handleSelectedStackRemove={handleSelectedStackRemove}
-          handleSelectedStackRemoveAll={handleSelectedStackRemoveAll}
+          handleRemoveFromSelectedStack={handleRemoveFromSelectedStack}
+          handleRemoveAllFromSelectedStack={handleRemoveAllFromSelectedStack}
         />
       </div>
 

@@ -1,5 +1,5 @@
 import { use } from "react"
-import type { Technology } from "../../types/techonology.type"
+import type { Technology } from "../../../types/techonology.type"
 import TechnologyCard from "./TechnologyCard";
 
 interface TechnologyListProps {
@@ -13,7 +13,7 @@ function TechnologyList({ technologiesPromise, selectedStacks, handleAddToSelect
     console.log(technologiesData)
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 col-span-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:col-span-3  gap-4">
             {
                 technologiesData.map((data, index) => (
                     <TechnologyCard

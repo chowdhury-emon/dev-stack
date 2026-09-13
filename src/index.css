@@ -7,9 +7,19 @@
 
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
-  color: #475569;
+  background-color: #FBFBFC;
+  color: #4B5563;
 }
 
-button{
+button {
   cursor: pointer;
+  transition: all .15s ease;
+  
+  &:active {
+    transform: scale(.95);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 }

@@ -7,7 +7,9 @@ function Hero() {
             <div className="grid items-center gap-6 text-center md:text-left ">
                 <h1 className="text-3xl md:text-5xl font-black text-black">
                     <div >Build Your Ideal</div>
-                    <div className="w-fit mx-auto md:mx-0 bg-linear-to-r from-secondary to-[#8338E4] bg-clip-text text-transparent ">Development Stack</div>
+                    <div className="w-fit mx-auto md:mx-0 bg-linear-to-r from-secondary to-[#8338E4] bg-clip-text text-transparent ">
+                        Development Stack
+                    </div>
                 </h1>
 
                 <p className="text-pretty">
@@ -18,7 +20,7 @@ function Hero() {
 
                 <div className="w-fit mx-auto md:mx-0 grid grid-cols-2 gap-2 mt-8 border-red-500">
                     <button
-                        className="p-2 px-3 text-sm rounded-lg border-2 border-neutral-100 bg-linear-to-r from-secondary to-primary text-white">
+                        className="p-2 px-3 text-sm rounded-lg bg-linear-to-r from-secondary to-primary text-white">
                         Explore Technologies
                     </button>
                     <button className="p-2 px-3 text-sm rounded-lg border border-neutral-300">Learn More</button>
