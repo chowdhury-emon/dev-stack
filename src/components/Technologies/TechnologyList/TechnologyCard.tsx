@@ -1,5 +1,6 @@
 import { HiCheck, HiStar } from "react-icons/hi";
 import type { Technology } from "../../../types/techonology.type"
+import { toast } from "react-toastify";
 
 interface TechnologyCardProps {
     technology: Technology;
@@ -11,7 +12,12 @@ function TechnologyCard({ technology, handleAddToSelectedStack, selectedStacks }
     const isSelected = selectedStacks.includes(technology);
 
     const handleAddToStack = () => {
-        handleAddToSelectedStack(technology);
+        if (isSelected) {
+            toast.warn("Duplicate add attempt");
+        } else {
+
+            handleAddToSelectedStack(technology);
+        }
     }
 
     return (
@@ -45,10 +51,10 @@ function TechnologyCard({ technology, handleAddToSelectedStack, selectedStacks }
             </section>
 
             <button
-                className="flex justify-center gap-2 items-center bg-black text-neutral-50 font-semibold w-full p-2 rounded-lg place-self-end  disabled:text-primary disabled:bg-primary/5 disabled:border disabled:border-primary/30"
-                disabled={isSelected}
+                className={`flex justify-center gap-2 items-center bg-black text-neutral-50 font-semibold w-full p-2 rounded-lg place-self-end transition-all active:scale-95 ${isSelected && "text-primary bg-primary/5 border border-primary/30 cursor-not-allowed"}`} 
+                // disabled={isSelected}
                 onClick={handleAddToStack}>
-                {isSelected ? <> <HiCheck /> Added </> : "Add to Stack"}
+                {isSelected ? <> <HiCheck /> Added to Stack </> : "Add to Stack"}
             </button>
         </article>
     )

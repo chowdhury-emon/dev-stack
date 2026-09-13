@@ -19,7 +19,7 @@ function StackCard({ selectedTechnology, handleRemoveFromSelectedStack }: StackC
         </div>
       </div>
 
-      <button className="text-2xl text-neutral-400 hover:shadow-none hover:text-red-500"
+      <button className="text-2xl text-neutral-400 hover:shadow-none hover:text-red-500 active:text-red-500"
         onClick={() => handleRemoveFromSelectedStack(selectedTechnology)}>
         <HiX />
       </button>

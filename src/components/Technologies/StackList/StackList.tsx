@@ -39,7 +39,7 @@ function StackList({ selectedStacks, handleRemoveFromSelectedStack, handleRemove
                 </section>
 
                 <button
-                    className={`p-2 font-bold text-red-500 border border-current/30 rounded-xl ${stackEmpty ? "hidden" : ""}`}
+                    className={`p-2 font-bold text-red-500 border border-current/30 rounded-xl transition-all active:scale-95 ${stackEmpty ? "hidden" : ""}`}
                     onClick={handleRemoveAllFromSelectedStack}>
                     Remove All
                 </button>
