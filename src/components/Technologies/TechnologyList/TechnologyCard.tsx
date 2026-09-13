@@ -1,4 +1,4 @@
-import { HiStar } from "react-icons/hi";
+import { HiCheck, HiStar } from "react-icons/hi";
 import type { Technology } from "../../../types/techonology.type"
 
 interface TechnologyCardProps {
@@ -45,10 +45,10 @@ function TechnologyCard({ technology, handleAddToSelectedStack, selectedStacks }
             </section>
 
             <button
-                className="bg-black text-neutral-50 font-semibold w-full p-2 rounded-lg place-self-end  disabled:text-primary disabled:bg-primary/5 disabled:border disabled:border-primary/30"
+                className="flex justify-center gap-2 items-center bg-black text-neutral-50 font-semibold w-full p-2 rounded-lg place-self-end  disabled:text-primary disabled:bg-primary/5 disabled:border disabled:border-primary/30"
                 disabled={isSelected}
                 onClick={handleAddToStack}>
-                Add to Stack
+                {isSelected ? <> <HiCheck /> Added </> : "Add to Stack"}
             </button>
         </article>
     )
