@@ -7,6 +7,7 @@ export interface Technology {
     rating: number;
     difficulty: TechnologyDifficulty;
     badge: string;
+    color?: string;
 }
 
 type TechnologyCategory = "Frontend" | "Backend" | "Database" | "Language" | "Styling" | "DevOps" | "Tools";

@@ -1,6 +1,6 @@
 import { Suspense, useState } from "react";
-import type { Technology } from "./techonology.type"
-import Loading from "../../utils/Loading";
+import type { Technology } from "../../types/techonology.type"
+import Loading from "../../ui/Loading";
 import TechnologyList from "./TechnologyList";
 
 const loadTechnologies = async (): Promise<Technology[]> => {

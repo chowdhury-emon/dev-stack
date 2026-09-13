@@ -1,5 +1,5 @@
 import { use } from "react"
-import type { Technology } from "./techonology.type"
+import type { Technology } from "../../types/techonology.type"
 import TechnologyCard from "./TechnologyCard";
 
 interface TechnologyListProps {
