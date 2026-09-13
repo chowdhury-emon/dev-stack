@@ -46,7 +46,7 @@ function Footer() {
                         </div>
                     </div>
                 </section>
-                <section className="flex justify-between py-10 pb-15 border-t border-neutral-100">
+                <section className="flex justify-between py-10 pb-15 border-t border-neutral-100 text-xs">
                     <p>© 2026 Dev Stack. All rights reserved.</p>
                     <div className="flex gap-2">
                         <a href="#">Privecy</a>
