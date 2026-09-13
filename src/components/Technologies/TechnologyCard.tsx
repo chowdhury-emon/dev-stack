@@ -4,15 +4,15 @@ import { useState } from "react";
 
 interface TechnologyCardProps {
     technology: Technology;
-    handleSelectedStack: (technology: Technology) => void
+    handleAddToSelectedStack: (technology: Technology) => void
 }
 
-function TechnologyCard({ technology, handleSelectedStack }: TechnologyCardProps) {
+function TechnologyCard({ technology, handleAddToSelectedStack }: TechnologyCardProps) {
     const [addedToStack, setAddedToStack] = useState(false);
 
     const handleAddToStack = () => {
         setAddedToStack(true);
-        handleSelectedStack(technology);
+        handleAddToSelectedStack(technology);
     }
 
     return (

@@ -3,7 +3,7 @@ import type { Technology } from "../../../types/techonology.type"
 
 interface StackCardProps {
   selectedTechnology: Technology
-  handleSelectedStackRemove: (id: string) => void
+  handleSelectedStackRemove: (technology: Technology) => void
 
 }
 
@@ -18,7 +18,7 @@ function StackCard({ selectedTechnology, handleSelectedStackRemove }: StackCardP
         </div>
       </div>
 
-      <button onClick={() => handleSelectedStackRemove(selectedTechnology.id)}>
+      <button onClick={() => handleSelectedStackRemove(selectedTechnology)}>
         <HiX className="text-2xl text-neutral-400" />
       </button>
 

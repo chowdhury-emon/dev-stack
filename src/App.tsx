@@ -1,3 +1,4 @@
+import { Slide, ToastContainer } from "react-toastify"
 import Footer from "./components/Footer/Footer"
 import Hero from "./components/Hero/Hero"
 import Navbar from "./components/Navbar/Navbar"
@@ -12,6 +13,20 @@ function App() {
         <Technologies />
       </main>
       <Footer />
+
+      <ToastContainer
+        position="top-center"
+        autoClose={1000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Slide}
+      />
     </div>
   )
 }

@@ -4,7 +4,7 @@ import StackCard from "./StackCard"
 
 interface StackListProps {
     selectedStacks: Technology[]
-    handleSelectedStackRemove: (id: string) => void
+    handleSelectedStackRemove: (technology: Technology) => void
     handleSelectedStackRemoveAll: () => void
 }
 

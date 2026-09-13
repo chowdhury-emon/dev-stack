@@ -4,10 +4,10 @@ import TechnologyCard from "./TechnologyCard";
 
 interface TechnologyListProps {
     technologiesPromise: Promise<Technology[]>
-    handleSelectedStack: (technology: Technology) => void
+    handleAddToSelectedStack: (technology: Technology) => void
 }
 
-function TechnologyList({ technologiesPromise, handleSelectedStack }: TechnologyListProps) {
+function TechnologyList({ technologiesPromise, handleAddToSelectedStack }: TechnologyListProps) {
     const technologiesData = use(technologiesPromise);
     console.log(technologiesData)
 
@@ -15,7 +15,7 @@ function TechnologyList({ technologiesPromise, handleSelectedStack }: Technology
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 col-span-3 gap-4">
             {
                 technologiesData.map((data, index) => (
-                    <TechnologyCard key={index} technology={data} handleSelectedStack={handleSelectedStack} />
+                    <TechnologyCard key={index} technology={data} handleAddToSelectedStack={handleAddToSelectedStack} />
                 ))
             }
 

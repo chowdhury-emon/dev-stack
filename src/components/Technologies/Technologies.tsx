@@ -3,6 +3,7 @@ import type { Technology } from "../../types/techonology.type"
 import Loading from "../../ui/Loading";
 import TechnologyList from "./TechnologyList";
 import StackList from "./StackList/StackList";
+import { toast } from "react-toastify";
 
 const loadTechnologies = async (): Promise<Technology[]> => {
   const res = await fetch("./data.json");
@@ -14,14 +15,18 @@ function Technologies() {
   const [technologiesPromise] = useState(() => loadTechnologies());
   const [selectedStacks, setSelectedStacks] = useState<Technology[]>([]);
 
-  const handleSelectedStack = (technology: Technology) => {
+  const handleAddToSelectedStack = (technology: Technology) => {
     setSelectedStacks(prev => [...prev, technology])
     console.log("Selected", selectedStacks)
+    toast.success( `${technology.name} added to Stack`)
+
   }
 
-  const handleSelectedStackRemove = (id: string) => {
-    const newSelectedItems = selectedStacks.filter(technology => technology.id !== id)
+  const handleSelectedStackRemove = (selectedTechnology: Technology) => {
+    const newSelectedItems = selectedStacks.filter(technology => technology.id !== selectedTechnology.id)
     setSelectedStacks(newSelectedItems);
+        toast.info( `${selectedTechnology.name} removed from Stack`)
+
   }
 
   const handleSelectedStackRemoveAll = () => {
@@ -43,7 +48,7 @@ function Technologies() {
         <Suspense fallback={<Loading />}>
           <TechnologyList
             technologiesPromise={technologiesPromise}
-            handleSelectedStack={handleSelectedStack}
+            handleAddToSelectedStack={handleAddToSelectedStack}
           />
         </Suspense>
         <StackList
