@@ -12,7 +12,7 @@ function StackCard({ selectedTechnology, handleRemoveFromSelectedStack }: StackC
 
     {/* Selected Technology Card  */}
       <div className="flex">
-        <img className="max-w-10" src={selectedTechnology.icon} alt="Technology Icon" />
+        <img className="max-w-10" src={selectedTechnology.icon} alt={`${selectedTechnology.name} icon`} />
         <div className="px-4">
           <h1 className=" text-black font-bold">{selectedTechnology.name}</h1>
           <p className="text-xs">{selectedTechnology.category}</p>

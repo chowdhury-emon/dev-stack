@@ -11,8 +11,7 @@ interface StackListProps {
 function StackList({ selectedStacks, handleRemoveFromSelectedStack, handleRemoveAllFromSelectedStack }: StackListProps) {
     const stackEmpty: boolean = selectedStacks.length === 0;
     return (
-        <article className="grid">
-            <div className="grid gap-10 h-fit bg-white border border-neutral-100 rounded-2xl p-4">
+            <article className="col-span-full xl:col-span-1 grid gap-10 h-fit min:w-fit lg:sticky lg:top-20 lg:max-h-[calc(100vh-6rem)] bg-white border border-neutral-100 rounded-2xl p-4">
                 <header>
                     <h1 className="text-xl/relaxed font-bold text-black">
                         Your Technology
@@ -24,8 +23,8 @@ function StackList({ selectedStacks, handleRemoveFromSelectedStack, handleRemove
                     </p>
                 </header>
 
-                <section className="grid gap-2">
-                    <div className={`${stackEmpty ? "block" : "hidden"} text-sm text-center text-neutral-400 p-8 border border-dashed border-neutral-200 rounded-xl`}>
+                <section className="grid gap-2 min-h-20 overflow-auto">
+                    <div className={`${stackEmpty ? "block" : "hidden"} text-sm text-center text-muted p-8 border border-dashed border-neutral-200 rounded-xl`}>
                         <p>Your stack is empty</p>
                     </div>
 
@@ -44,8 +43,8 @@ function StackList({ selectedStacks, handleRemoveFromSelectedStack, handleRemove
                     onClick={handleRemoveAllFromSelectedStack}>
                     Remove All
                 </button>
-            </div>
-        </article>
+            </article>
+
     )
 }
 

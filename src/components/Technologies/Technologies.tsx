@@ -45,7 +45,7 @@ function Technologies() {
       </div>
 
       {/* Technology cards grid section */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-10">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mt-10">
         <Suspense fallback={<Loading />}>
           <TechnologyList
             technologiesPromise={technologiesPromise}
