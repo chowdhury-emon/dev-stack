@@ -1,3 +1,4 @@
+import Footer from "./components/Footer/Footer"
 import Hero from "./components/Hero/Hero"
 import Navbar from "./components/Navbar/Navbar"
 import Technologies from "./components/Technologies/Technologies"
@@ -10,6 +11,7 @@ function App() {
         <Hero />
         <Technologies />
       </main>
+      <Footer />
     </div>
   )
 }
