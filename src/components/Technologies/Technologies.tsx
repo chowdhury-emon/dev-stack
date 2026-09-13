@@ -49,6 +49,7 @@ function Technologies() {
         <Suspense fallback={<Loading />}>
           <TechnologyList
             technologiesPromise={technologiesPromise}
+            selectedStacks={selectedStacks}
             handleAddToSelectedStack={handleAddToSelectedStack}
           />
         </Suspense>

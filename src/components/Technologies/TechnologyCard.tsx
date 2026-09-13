@@ -4,19 +4,18 @@ import { useState } from "react";
 
 interface TechnologyCardProps {
     technology: Technology;
+    selectedStacks: Technology[];
     handleAddToSelectedStack: (technology: Technology) => void
 }
 
-function TechnologyCard({ technology, handleAddToSelectedStack }: TechnologyCardProps) {
-    const [addedToStack, setAddedToStack] = useState(false);
+function TechnologyCard({ technology, handleAddToSelectedStack, selectedStacks }: TechnologyCardProps) {
 
     const handleAddToStack = () => {
-        setAddedToStack(true);
         handleAddToSelectedStack(technology);
     }
 
     return (
-        <article className={`grid border-2 border-neutral-100 rounded-2xl p-4 ${addedToStack ? "border-primary/30" : ""}`}>
+        <article className={`grid border-2 border-neutral-100 rounded-2xl p-4 ${selectedStacks.includes(technology) ? "border-primary/30" : ""}`}>
             <section className="flex justify-between">
                 <img className="max-w-8" src={technology.icon} alt="" />
                 <div
@@ -42,7 +41,7 @@ function TechnologyCard({ technology, handleAddToSelectedStack }: TechnologyCard
 
             <button
                 className="bg-black text-neutral-50 w-full p-2 rounded-lg place-self-end disabled:text-primary disabled:bg-primary/10"
-                disabled={addedToStack}
+                disabled={selectedStacks.includes(technology)}
                 onClick={handleAddToStack}>
                 Add to Stack
             </button>

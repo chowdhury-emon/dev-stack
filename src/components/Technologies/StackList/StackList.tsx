@@ -3,9 +3,9 @@ import type { Technology } from "../../../types/techonology.type"
 import StackCard from "./StackCard"
 
 interface StackListProps {
-    selectedStacks: Technology[]
-    handleSelectedStackRemove: (technology: Technology) => void
-    handleSelectedStackRemoveAll: () => void
+    selectedStacks: Technology[];
+    handleSelectedStackRemove: (technology: Technology) => void;
+    handleSelectedStackRemoveAll: () => void;
 }
 
 function StackList({ selectedStacks, handleSelectedStackRemove, handleSelectedStackRemoveAll }: StackListProps) {
