@@ -1,8 +1,8 @@
 
 function Footer() {
     return (
-        <footer className="mt-20 px-4 border-t border-neutral-100 text-sm">
-            <div className="container mx-auto ">
+        <footer className="mt-20 border-t border-neutral-100 text-sm">
+            <div className="container mx-auto px-4">
                 <section className="grid lg:grid-cols-5 gap-10 py-20">
                     <div className="col-span-2 grid place-items-center gap-4 text-center text-pretty lg:place-items-start lg:text-start">
                         <img src="./logo.svg" alt="logo image of Dev Stack" />
