@@ -1,6 +1,5 @@
 import { HiStar } from "react-icons/hi";
 import type { Technology } from "../../types/techonology.type"
-import { useState } from "react";
 
 interface TechnologyCardProps {
     technology: Technology;

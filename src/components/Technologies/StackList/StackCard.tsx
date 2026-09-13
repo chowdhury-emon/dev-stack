@@ -4,7 +4,6 @@ import type { Technology } from "../../../types/techonology.type"
 interface StackCardProps {
   selectedTechnology: Technology
   handleSelectedStackRemove: (technology: Technology) => void
-
 }
 
 function StackCard({ selectedTechnology, handleSelectedStackRemove }: StackCardProps) {

@@ -3,9 +3,9 @@ import type { Technology } from "../../../types/techonology.type"
 import StackCard from "./StackCard"
 
 interface StackListProps {
-    selectedStacks: Technology[];
-    handleSelectedStackRemove: (technology: Technology) => void;
-    handleSelectedStackRemoveAll: () => void;
+    selectedStacks: Technology[]
+    handleSelectedStackRemove: (technology: Technology) => void
+    handleSelectedStackRemoveAll: () => void
 }
 
 function StackList({ selectedStacks, handleSelectedStackRemove, handleSelectedStackRemoveAll }: StackListProps) {
@@ -24,7 +24,7 @@ function StackList({ selectedStacks, handleSelectedStackRemove, handleSelectedSt
                 </header>
 
                 <section className="grid gap-2">
-                    <div className={`text-sm text-center p-8 border border-dashed border-neutral-200 rounded-xl ${stackEmpty ? "block": "hidden"}`}>
+                    <div className={`text-sm text-center p-8 border border-dashed border-neutral-200 rounded-xl ${stackEmpty ? "block" : "hidden"}`}>
                         <p>Your stack is empty</p>
                     </div>
                     {
@@ -38,7 +38,7 @@ function StackList({ selectedStacks, handleSelectedStackRemove, handleSelectedSt
                 </section>
 
                 <button
-                    className={`p-2 font-bold text-red-700 border border-current rounded-xl ${stackEmpty? "hidden": ""}`}
+                    className={`p-2 font-bold text-red-700 border border-current rounded-xl ${stackEmpty ? "hidden" : ""}`}
                     onClick={handleSelectedStackRemoveAll}>
                     Remove All
                 </button>
