@@ -18,19 +18,20 @@ function Technologies() {
   const handleAddToSelectedStack = (technology: Technology) => {
     setSelectedStacks(prev => [...prev, technology])
     console.log("Selected", selectedStacks)
-    toast.success( `${technology.name} added to Stack`)
+    toast.success(`${technology.name} added to Stack`)
 
   }
 
   const handleSelectedStackRemove = (selectedTechnology: Technology) => {
     const newSelectedItems = selectedStacks.filter(technology => technology.id !== selectedTechnology.id)
     setSelectedStacks(newSelectedItems);
-        toast.info( `${selectedTechnology.name} removed from Stack`)
+    toast.info(`${selectedTechnology.name} removed from Stack`)
 
   }
 
   const handleSelectedStackRemoveAll = () => {
     setSelectedStacks([])
+    toast.info("All Items has been Removed from Stack")
   }
 
   return (
