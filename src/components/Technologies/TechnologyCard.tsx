@@ -1,13 +1,22 @@
 import { HiStar } from "react-icons/hi";
 import type { Technology } from "../../types/techonology.type"
+import { useState } from "react";
 
 interface TechnologyCardProps {
     technology: Technology;
+    handleSelectedStack: (technology: Technology) => void
 }
 
-function TechnologyCard({ technology }: TechnologyCardProps) {
+function TechnologyCard({ technology, handleSelectedStack }: TechnologyCardProps) {
+    const [addedToStack, setAddedToStack] = useState(false);
+
+    const handleAddToStack = () => {
+        setAddedToStack(true);
+        handleSelectedStack(technology);
+    }
+
     return (
-        <article className="grid border-2 border-neutral-100 rounded-2xl p-4">
+        <article className={`grid border-2 border-neutral-100 rounded-2xl p-4 ${addedToStack ? "border-primary/30" : ""}`}>
             <section className="flex justify-between">
                 <img className="max-w-8" src={technology.icon} alt="" />
                 <div
@@ -31,7 +40,12 @@ function TechnologyCard({ technology }: TechnologyCardProps) {
                 </div>
             </section>
 
-            <button className="bg-black text-white w-full p-2 rounded-lg place-self-end">Add to Stack</button>
+            <button
+                className="bg-black text-neutral-50 w-full p-2 rounded-lg place-self-end disabled:text-primary disabled:bg-primary/10"
+                disabled={addedToStack}
+                onClick={handleAddToStack}>
+                Add to Stack
+            </button>
         </article>
     )
 }

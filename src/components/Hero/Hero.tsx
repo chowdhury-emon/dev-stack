@@ -21,7 +21,7 @@ function Hero() {
                         className="p-2 px-3 text-sm rounded-lg border-2 border-neutral-100 bg-linear-to-r from-secondary to-primary text-white">
                         Explore Technologies
                     </button>
-                    <button className="p-2 px-3 text-sm rounded-lg border-2 border-neutral-100">Learn More</button>
+                    <button className="p-2 px-3 text-sm rounded-lg border border-neutral-300">Learn More</button>
                 </div>
             </div>
 
